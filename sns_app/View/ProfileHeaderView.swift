@@ -38,7 +38,7 @@ class ProfileHeaderView: UICollectionReusableView {
     
     private lazy var postLabel: UILabel = { // 질문 - let 선언 시 에러났는데 lazy var 로 바꾸니까 에러 해결됨
         let lb = UILabel()
-        lb.attributedText = attributedStatText(value: 30, label: "post")
+        lb.attributedText = attributedStatText(value: 7, label: "post")
         lb.textAlignment = .center
         lb.numberOfLines = 0
         
@@ -150,8 +150,13 @@ class ProfileHeaderView: UICollectionReusableView {
     
     private let gridBtn1: UIButton = {
         let btn = UIButton()
-        btn.setImage(UIImage(systemName: "squareshape.split.3x3")?.resizableImage(withCapInsets: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0), resizingMode: .stretch), for: .normal)
+        btn.setImage(UIImage(systemName: "squareshape.split.3x3"), for: .normal)
         btn.tintColor = .black
+        btn.imageView?.contentMode = .scaleAspectFit
+        btn.frame = CGRect(x: 0, y: 0, width: 25, height: 25)
+        btn.contentVerticalAlignment = .fill
+        btn.contentHorizontalAlignment = .fill
+//        btn.imageEdgeInsets = UIEdgeInsets(top: 2, left: 2, bottom: 2, right: 2)
 //        btn.addTarget(self , action: #selector(gridBtnTap), for: .touchUpInside)
         
         return btn
@@ -159,8 +164,12 @@ class ProfileHeaderView: UICollectionReusableView {
     
     private let gridBtn2: UIButton = {
         let btn = UIButton()
-        btn.setImage(UIImage(systemName: "squareshape.split.3x3")?.resizableImage(withCapInsets: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0), resizingMode: .stretch), for: .normal)
+        btn.setImage(UIImage(systemName: "play.square"), for: .normal)
         btn.tintColor = .black
+        btn.imageView?.contentMode = .scaleAspectFit
+        btn.frame = CGRect(x: 0, y: 0, width: 25, height: 25)
+        btn.contentVerticalAlignment = .fill
+        btn.contentHorizontalAlignment = .fill
 //        btn.addTarget(self , action: #selector(gridBtnTap), for: .touchUpInside)
         
         return btn
@@ -168,8 +177,12 @@ class ProfileHeaderView: UICollectionReusableView {
     
     private let gridBtn3: UIButton = {
         let btn = UIButton()
-        btn.setImage(UIImage(systemName: "squareshape.split.3x3")?.resizableImage(withCapInsets: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0), resizingMode: .stretch), for: .normal)
+        btn.setImage(UIImage(systemName: "person.crop.square"), for: .normal)
         btn.tintColor = .black
+        btn.imageView?.contentMode = .scaleAspectFit
+        btn.frame = CGRect(x: 0, y: 0, width: 25, height: 25)
+        btn.contentVerticalAlignment = .fill
+        btn.contentHorizontalAlignment = .fill
 //        btn.addTarget(self , action: #selector(gridBtnTap), for: .touchUpInside)
         
         return btn
@@ -192,7 +205,6 @@ class ProfileHeaderView: UICollectionReusableView {
         backgroundColor = .white
         
         setConstraints()
-        
         
     }
     

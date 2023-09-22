@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = ProfileViewController() // ViewController 인스턴스 생성해서 추가
+        window.rootViewController = TabBarController() // ViewController 인스턴스 생성해서 추가
         window.makeKeyAndVisible()
         
         self.window = window
