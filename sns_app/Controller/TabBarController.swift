@@ -28,12 +28,12 @@ class TabBarController: UITabBarController {
         profileViewController.view.backgroundColor = UIColor.white
         profileViewController.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "house"), tag: 0)
 
-        let myPageViewController = MyPageViewController()
-        myPageViewController.view.backgroundColor = UIColor.white
-        myPageViewController.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "person.fill"), tag: 1)
+        let ToDoListViewController = ToDoListViewController()
+        ToDoListViewController.view.backgroundColor = UIColor.white
+        ToDoListViewController.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "person.fill"), tag: 1)
 
         // 생성한 ViewController들을 Tab Bar에 추가합니다.
-        viewControllers = [profileViewController, myPageViewController]
+        viewControllers = [profileViewController, ToDoListViewController]
 
     }
 

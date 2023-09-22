@@ -156,7 +156,6 @@ class ProfileHeaderView: UICollectionReusableView {
         btn.frame = CGRect(x: 0, y: 0, width: 25, height: 25)
         btn.contentVerticalAlignment = .fill
         btn.contentHorizontalAlignment = .fill
-//        btn.imageEdgeInsets = UIEdgeInsets(top: 2, left: 2, bottom: 2, right: 2)
 //        btn.addTarget(self , action: #selector(gridBtnTap), for: .touchUpInside)
         
         return btn
